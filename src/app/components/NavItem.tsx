@@ -18,7 +18,7 @@ export default function NavItem({ href, isActive, Icon, color, children }: NavIt
     })
 
     const iconBgClassNames = clsx({
-        'rounded-full p-2': true,
+        'rounded-full p-2 border': true,
         'blue-bg': color === 'blue',
         'yellow-bg': color === 'yellow',
         'red-bg': color === 'red',

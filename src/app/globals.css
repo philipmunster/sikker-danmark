@@ -19,18 +19,18 @@ body {
   font-family: var(--font-inter), Helvetica, sans-serif;
 }
 
-@utility blue-bg {
-  @apply bg-sky-100 border border-sky-200
+.blue-bg {
+  @apply bg-sky-100 border-sky-200;
 }
- 
-@utility yellow-bg {
-  @apply bg-yellow-200 border border-yellow-300
+  
+.yellow-bg {
+  @apply bg-yellow-200 border-yellow-300;
 }
- 
-@utility red-bg {
-  @apply bg-red-200 border border-red-300
+  
+.red-bg {
+  @apply bg-red-200 border-red-300;
 }
- 
-@utility purple-bg {
-  @apply bg-purple-200 border border-purple-300
+  
+.purple-bg {
+  @apply bg-purple-200 border-purple-300;
 }
