@@ -1,6 +1,12 @@
+import Headline from '@/app/components/Headline'
+import { BookOpen } from 'lucide-react'
+
 export default async function TipsPage() {
 
     return (
-        <h1>This is the tips page</h1>
+        <section className='mx-4'>
+            <Headline color='blue' Icon={BookOpen} title='Overlevelsestips'>Følg nedenstånde instruktioner for bedst at håndtere en krisesituation.</Headline>
+        </section>
     )
 }
+
