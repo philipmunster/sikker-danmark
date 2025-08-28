@@ -1,17 +1,11 @@
 "use client"
 
 import { BookOpen, Package, Heart, Phone } from 'lucide-react'
-import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import NavItem from '@/app/components/NavItem'
 
 export default function Navigation() {
     const pathname = usePathname()
-
-    const tipsActiveStyles = pathname === '/tips' ? 'bg-white shadow-md': ''
-    const suppliesActiveStyles = pathname === '/supplies' ? 'bg-white shadow-md': ''
-    const medicinActiveStyles = pathname === '/medicin' ? 'bg-white shadow-md': ''
-    const phoneActiveStyles = pathname === '/phone' ? 'bg-white shadow-md': ''
 
     return (
         <nav>

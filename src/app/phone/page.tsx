@@ -1,6 +1,11 @@
+import Headline from '@/app/components/Headline'
+import { Phone } from 'lucide-react'
+
 export default async function PhonePage() {
 
     return (
-        <h1>This is the phone page</h1>
+        <section className='mx-4'>
+            <Headline color='purple' Icon={Phone} title='Nødkontakt information'>Vigtige telefonnumre og kontaktinformation til nødsituationer.</Headline>
+        </section>
     )
 }
