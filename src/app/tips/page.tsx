@@ -5,7 +5,7 @@ import DropdownTop from '@/app/tips/DropdownTop'
 import DropdownBottom from '@/app/tips/DropdownBottom'
 import { BookOpen } from 'lucide-react'
 
-export default async function TipsPage() {
+export default function TipsPage() {
 
     return (
         <section className='mx-4 mb-4 flex flex-col gap-4'>
@@ -21,7 +21,7 @@ export default async function TipsPage() {
             >
 
                 <DropdownTop title='Vandrensning' color='blue'>
-                    <li>og vand i mindst 1 minut for at dræbe bakterier</li>
+                    <li>Kog vand i mindst 1 minut for at dræbe bakterier</li>
                     <li>Brug vandrensningstabletter hvis tilgængelige</li>
                     <li>Filtrer vand gennem rent tøj først hvis det er grumset</li>
                     <li>Saml regnvand i rene beholdere</li>
