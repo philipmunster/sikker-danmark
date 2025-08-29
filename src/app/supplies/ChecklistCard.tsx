@@ -5,7 +5,7 @@ import ProgressBar from '@/app/components/ProgressBar'
 import { useState } from 'react'
 import clsx from 'clsx'
 
-export default function ChecklistCard({ categoryObj }) {
+export default function ChecklistCard({ categoryObj, toggleTotalChecked }) {
 
     const [checkedCount, setCheckedCount] = useState({
         'nonCritical': 0,
@@ -25,11 +25,12 @@ export default function ChecklistCard({ categoryObj }) {
             ...prev,
             [key]: prev[key] + change
         }))
+
+        toggleTotalChecked(checked, label)
     }
 
     const checklistItems = categoryObj.data.map(item => {
         const borderValue = item.label === 'KRITISK' ? 'border-red-100' : 'border-gray-100'
-
         return (
             <div className={clsx(borderValue, 'flex', 'items-start', 'gap-2', 'p-3', 'border-2', 'rounded-lg', 'text-xs')}>
                 <input type='checkbox' name={item.title} onChange={(e) => toggleChecked(e.target.checked, item.label)}/>
@@ -41,6 +42,8 @@ export default function ChecklistCard({ categoryObj }) {
             </div>
         )
     })
+
+    const elementCountStyle = fractionDone === 1 ? 'bg-green-700 text-white' : 'border-gray-300'
 
     return (
         <div className="flex flex-col gap-3 border border-gray-200 p-4 rounded-lg text-sm">
@@ -55,8 +58,8 @@ export default function ChecklistCard({ categoryObj }) {
                     </div>
                 </div>
                 <div className='flex flex-col gap-2'>
-                    <span className='border border-gray-300 rounded-lg px-2 text-xs flex items-center py-1'>
-                        {`${fractionDone * 100}% i mål`}
+                    <span className={clsx(elementCountStyle, 'border', 'rounded-lg', 'px-2', 'text-xs', 'flex', 'items-center', 'py-1')}>
+                        {`${Math.round(fractionDone * 100)}% i mål`}
                     </span>
                     <ProgressBar value={fractionDone}/>
                 </div>

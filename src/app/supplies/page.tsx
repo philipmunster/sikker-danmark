@@ -3,9 +3,10 @@
 import Headline from '@/app/components/Headline'
 import ProgressBar from '@/app/components/ProgressBar'
 import ChecklistCard from '@/app/supplies/ChecklistCard'
-import { Package, Target, AlertOctagon } from 'lucide-react'
+import { Package, Target, AlertOctagon, Bandage, Radio, Hammer, Bubbles, IdCard } from 'lucide-react'
 import { suppliesData } from '@/app/data/supplies'
 import { useState } from 'react'
+import clsx from 'clsx'
 
 export default function SuppliesPage() {
 
@@ -36,9 +37,19 @@ export default function SuppliesPage() {
 
     const checklistCards = suppliesData.map((category, index) => {
         return (
-            <ChecklistCard key={index} categoryObj={category}/>
+            <ChecklistCard key={index} categoryObj={category} toggleTotalChecked={toggleTotalChecked}/>
         )
     })
+
+    const elementCountStyle = totalFractionDone === 1 ? 'bg-green-700 text-white' : 'border-gray-300'
+
+    const iconMapObj = {
+        
+    }
+
+    const colorMapObj = {
+
+    }
 
     return (
         <section className='mx-4 mb-4 flex flex-col gap-4'>
@@ -50,12 +61,12 @@ export default function SuppliesPage() {
                         <Target className='h-5 w-5'/>
                         <h3>Samlet fremgang</h3>
                     </div>
-                    <span className='border border-gray-300 rounded-lg px-2 text-xs flex items-center py-1'>
+                    <span className={clsx(elementCountStyle, 'border', 'rounded-lg', 'px-2', 'text-xs', 'flex', 'items-center', 'py-1')}>
                         {`${totalNonCriticalCount + totalCriticalCount} / ${totalElementCount} elementer`}
                     </span>
                 </div>
                 <ProgressBar value={totalFractionDone} />
-                <p className='text-gray-600'>0% af forsyninger tjekket af</p>
+                <p className='text-gray-600'>{`${Math.round(totalFractionDone * 100)}% af alle forsyninger tjekket af`}</p>
             </div>
 
             <div className='flex flex-col gap-3 bg-red-100 p-4 rounded-md text-sm shadow-md'>
@@ -69,7 +80,7 @@ export default function SuppliesPage() {
                     </span>
                 </div>
                 <ProgressBar value={totalCriticalFractionDone} />
-                <p className='text-gray-600'>0% af forsyninger tjekket af</p>
+                <p className='text-gray-600'>{`${Math.round(totalCriticalFractionDone * 100)}% af kritiske forsyninger tjekket af`}</p>
             </div>
 
             {checklistCards}
