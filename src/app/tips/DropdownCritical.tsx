@@ -12,7 +12,7 @@ export default function DropdownCritical() {
     function toggleDropdown() {
         setIsOpen(prevValue => !prevValue)
     }
-
+ 
     return (
         <div className='bg-red-50 rounded-md'>
             <div className='flex flex-col gap-4 px-4 py-3 relative'>
