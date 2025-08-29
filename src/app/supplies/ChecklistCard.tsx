@@ -1,6 +1,6 @@
 "use client"
 
-import { Droplets } from 'lucide-react'
+import { Droplets, Bandage, Radio, Hammer, Bubbles, IdCard } from 'lucide-react'
 import ProgressBar from '@/app/components/ProgressBar'
 import { useState } from 'react'
 import clsx from 'clsx'
@@ -29,6 +29,27 @@ export default function ChecklistCard({ categoryObj, toggleTotalChecked }) {
         toggleTotalChecked(checked, label)
     }
 
+    const iconMapObj = {
+        'Vand & Mad': Droplets,
+        'Medicin': Bandage, 
+        'Kommunikation': Radio, 
+        'Værktøj': Hammer, 
+        'Hygiejne': Bubbles, 
+        'Dokumenter': IdCard
+    }
+    const Icon = iconMapObj[categoryObj.type]
+
+    const colorMapObj = {
+        'Vand & Mad': 'bg-blue-200 text-blue-600 rounded-full p-2',
+        'Medicin': 'bg-red-200 text-red-600 rounded-full p-2', 
+        'Kommunikation': 'bg-purple-200 text-purple-600 rounded-full p-2', 
+        'Værktøj': 'bg-orange-200 text-orange-600 rounded-full p-2', 
+        'Hygiejne': 'bg-green-200 text-green-600 rounded-full p-2', 
+        'Dokumenter': 'bg-gray-200 text-gray-600 rounded-full p-2'
+    }
+    const iconColorStyles = colorMapObj[categoryObj.type]
+
+
     const checklistItems = categoryObj.data.map(item => {
         const borderValue = item.label === 'KRITISK' ? 'border-red-100' : 'border-gray-100'
         return (
@@ -49,12 +70,12 @@ export default function ChecklistCard({ categoryObj, toggleTotalChecked }) {
         <div className="flex flex-col gap-3 border border-gray-200 p-4 rounded-lg text-sm">
             <div className='flex justify-between items-center'>
                 <div className='flex items-center gap-4'>
-                    <div>
-                        <Droplets />
+                    <div className={iconColorStyles}>
+                        <Icon className='h-4 w-4'/>
                     </div>
                     <div>
                         <h3>{categoryObj.type}</h3>
-                        <p>{elementCount} elementer</p>
+                        <p className='text-xs text-gray-600'>{elementCount} elementer</p>
                     </div>
                 </div>
                 <div className='flex flex-col gap-2'>

@@ -3,7 +3,7 @@
 import Headline from '@/app/components/Headline'
 import ProgressBar from '@/app/components/ProgressBar'
 import ChecklistCard from '@/app/supplies/ChecklistCard'
-import { Package, Target, AlertOctagon, Bandage, Radio, Hammer, Bubbles, IdCard } from 'lucide-react'
+import { Package, Target, AlertOctagon } from 'lucide-react'
 import { suppliesData } from '@/app/data/supplies'
 import { useState } from 'react'
 import clsx from 'clsx'
@@ -42,14 +42,6 @@ export default function SuppliesPage() {
     })
 
     const elementCountStyle = totalFractionDone === 1 ? 'bg-green-700 text-white' : 'border-gray-300'
-
-    const iconMapObj = {
-        
-    }
-
-    const colorMapObj = {
-
-    }
 
     return (
         <section className='mx-4 mb-4 flex flex-col gap-4'>
