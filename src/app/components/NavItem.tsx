@@ -14,7 +14,7 @@ type NavItemProps = {
 export default function NavItem({ href, isActive, Icon, color = '', simpleVariant = false, children }: NavItemProps) {
 
     const wrapperClassNames = clsx({
-        'flex flex-col items-center gap-1 cursor-pointer w-1/4 py-2 rounded-lg hover:bg-white hover:shadow-md  hover:rounded-lg': true,
+        'flex flex-col items-center gap-1 cursor-pointer w-full py-2 rounded-lg hover:bg-white hover:shadow-md  hover:rounded-lg': true,
         'bg-white shadow-md': isActive
     })
 
