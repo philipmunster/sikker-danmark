@@ -5,7 +5,7 @@ export default async function PhonePage() {
 
     return (
         <section className='mx-4'>
-            <Headline color='purple' Icon={Phone} title='Nødkontakt information'>Vigtige telefonnumre og kontaktinformation til nødsituationer.</Headline>
+            <Headline color='purple' Icon={Phone} title='Nødkontakter'>Vigtige telefonnumre og kontaktinformation til nødsituationer.</Headline>
         </section>
     )
 }

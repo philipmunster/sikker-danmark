@@ -45,7 +45,7 @@ export default function SuppliesPage() {
 
     return (
         <section className='mx-4 mb-4 flex flex-col gap-4'>
-            <Headline color='yellow' Icon={Package} title='Tjekliste med nødforsyninger'>Følg nedenstående tjekliste for at sikre dig at du har de nødvendige forsyninger hvis du skal klare dig i en krisesituation.</Headline>
+            <Headline color='yellow' Icon={Package} title='Nødforsyninger'>Følg nedenstående tjekliste for at forberede dig til en krisesituation.</Headline>
 
             <div className='flex flex-col gap-3 bg-gray-100 p-4 rounded-md text-sm shadow-md'>
                 <div className='flex justify-between items-center'>

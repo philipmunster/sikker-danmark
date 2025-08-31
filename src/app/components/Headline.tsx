@@ -10,27 +10,20 @@ type HeadlineProps = {
 
 export default function Headline({color = 'blue', Icon, title, children}: HeadlineProps) {
 
-    const bgColor = {
-        blue: 'blue-bg',
-        yellow: 'yellow-bg',
-        red: 'red-bg',
-        purple: 'purple-bg',
-    }
-
     const textColor = {
-        blue: 'text-blue-900',
-        yellow: 'text-yellow-900',
-        red: 'text-red-900',
-        purple: 'text-purple-900',
+        blue: 'text-blue-800',
+        yellow: 'text-yellow-700',
+        red: 'text-red-700',
+        purple: 'text-purple-700',
     }
 
     return (
-        <div className={clsx(bgColor[color], 'p-4', 'rounded-md', 'border-2')}>
-            <div className='flex items-center gap-3 mb-1'>
-                <h1 className={clsx(textColor[color], 'text-lg', 'font-bold')}>{title}</h1>
+        <div className='text-center py-4 px-2'>
+            <div className='flex items-center justify-center gap-3 mb-1'>
+                <h1 className={clsx(textColor[color], 'text-2xl', 'font-bold')}>{title}</h1>
                 <Icon className={textColor[color]} />
             </div>
-            <p className='text-sm text-gray-700'>{children}</p>
+            <p className='text-sm text-gray-700 leading-relaxed'>{children}</p>
         </div>
     )
 }
