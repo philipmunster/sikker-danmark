@@ -14,11 +14,11 @@ export default function Navigation() {
             bg-neutral-100 m-4 rounded-lg border-2 border-neutral-200
             text-xs 
             ">  
-                <NavItem href='/tips' isActive={pathname === '/tips'} Icon={BookOpen} color='blue'>
-                    Tips
-                </NavItem>
                 <NavItem href='/supplies' isActive={pathname === '/supplies'} Icon={Package} color='yellow'>
                     Forsyninger
+                </NavItem>
+                <NavItem href='/tips' isActive={pathname === '/tips'} Icon={BookOpen} color='blue'>
+                    Tips
                 </NavItem>
                 <NavItem href='/medicin' isActive={pathname === '/medicin'} Icon={Heart} color='red'>
                     Medicin
