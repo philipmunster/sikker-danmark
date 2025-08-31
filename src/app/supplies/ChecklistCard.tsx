@@ -2,6 +2,7 @@
 
 import { Droplets, Bandage, Radio, Hammer, Bubbles, IdCard } from 'lucide-react'
 import ProgressBar from '@/app/components/ProgressBar'
+import Badge from '@/app/components/Badge'
 import { useState } from 'react'
 import clsx from 'clsx'
 
@@ -50,13 +51,21 @@ export default function ChecklistCard({ categoryObj, toggleTotalChecked }) {
     const iconColorStyles = colorMapObj[categoryObj.type]
 
 
-    const checklistItems = categoryObj.data.map(item => {
+    const checklistItems = categoryObj.data.map((item, index) => {
         const borderValue = item.label === 'KRITISK' ? 'border-red-100' : 'border-gray-100'
+        const badgeColor = {
+            'KRITISK': 'red',
+            'VIGTIG': 'gray',
+            'NYTTIG': 'white'
+        }
         return (
-            <div className={clsx(borderValue, 'flex', 'items-start', 'gap-2', 'p-3', 'border-2', 'rounded-lg', 'text-xs')}>
+            <div key={index} className={clsx(borderValue, 'flex', 'items-start', 'gap-2', 'p-3', 'border-2', 'rounded-lg', 'text-xs')}>
                 <input type='checkbox' name={item.title} onChange={(e) => toggleChecked(e.target.checked, item.label)}/>
-                <div className="flex flex-col gap-1">
-                    <label htmlFor={item.title} className="font-bold flex gap-2">{item.title}</label>
+                <div className="flex flex-col gap-1 w-full mt-[-1px]">
+                    <div className='flex justify-between'>
+                        <label htmlFor={item.title} className="font-bold flex gap-2">{item.title}</label>
+                        <Badge color={badgeColor[item.label]}>{item.label}</Badge>
+                    </div>
                     <p className="text-gray-600">Mængde: {item.amount}</p>
                     {item?.comment && <li className="italic marker:text-gray-600">{item.comment}</li>}
                 </div>
