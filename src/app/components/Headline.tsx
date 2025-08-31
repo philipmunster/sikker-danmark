@@ -18,7 +18,7 @@ export default function Headline({color = 'blue', Icon, title, children}: Headli
     }
 
     return (
-        <div className='text-center py-4 px-2'>
+        <div className='text-center py-2 px-2'>
             <div className='flex items-center justify-center gap-3 mb-1'>
                 <h1 className={clsx(textColor[color], 'text-2xl', 'font-bold')}>{title}</h1>
                 <Icon className={textColor[color]} />

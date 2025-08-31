@@ -6,11 +6,12 @@ type NavItemProps = {
     href: string
     isActive: boolean
     Icon: LucideIcon
-    color: string
+    color?: string
+    simpleVariant?: boolean
     children: React.ReactNode
 }
 
-export default function NavItem({ href, isActive, Icon, color, children }: NavItemProps) {
+export default function NavItem({ href, isActive, Icon, color = '', simpleVariant = false, children }: NavItemProps) {
 
     const wrapperClassNames = clsx({
         'flex flex-col items-center gap-1 cursor-pointer w-1/4 py-2 rounded-lg hover:bg-white hover:shadow-md  hover:rounded-lg': true,
@@ -27,7 +28,7 @@ export default function NavItem({ href, isActive, Icon, color, children }: NavIt
     
     return (
         <Link href={href} className={wrapperClassNames}>
-            <div className={iconBgClassNames}><Icon className='h-4 w-4'/></div>
+            <div className={simpleVariant ? '' : iconBgClassNames}><Icon className='h-4 w-4'/></div>
             <li>{children}</li>
         </Link>
     )
