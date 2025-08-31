@@ -25,7 +25,7 @@ export default function SuppliesPage() {
     const totalFractionDone = (totalNonCriticalCount + totalCriticalCount) / totalElementCount
     const totalCriticalFractionDone = (totalCriticalCount) / totalCriticalElementCount
 
-    function toggleTotalChecked(checked, label) {
+    function toggleTotalChecked(checked: boolean, label: 'KRITISK' | 'VIGTIG' | 'NYTTIG'): void {
         const key = label === 'KRITISK' ? 'critical' : 'nonCritical'
         const change = checked ? 1 : -1
 

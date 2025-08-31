@@ -1,12 +1,19 @@
 "use client"
 
-import { Droplets, Bandage, Radio, Hammer, Bubbles, IdCard } from 'lucide-react'
+import { Droplets, Bandage, Radio, Hammer, Bubbles, IdCard, type LucideIcon } from 'lucide-react'
 import ProgressBar from '@/app/components/ProgressBar'
 import Badge from '@/app/components/Badge'
 import { useState } from 'react'
 import clsx from 'clsx'
+import { type CategoryDataType } from '@/app/data/supplies'
 
-export default function ChecklistCard({ categoryObj, toggleTotalChecked }) {
+type ChecklistCardProps = {
+    categoryObj: CategoryDataType
+    toggleTotalChecked: (checked: boolean, label: 'KRITISK' | 'VIGTIG' | 'NYTTIG') => void
+}
+
+
+export default function ChecklistCard({ categoryObj, toggleTotalChecked }: ChecklistCardProps) {
 
     const [checkedCount, setCheckedCount] = useState({
         'nonCritical': 0,
@@ -18,7 +25,7 @@ export default function ChecklistCard({ categoryObj, toggleTotalChecked }) {
     const elementCount = categoryObj.data.length
     const fractionDone = (nonCriticalCount + criticalCount) / elementCount
 
-    function toggleChecked(checked, label) {
+    function toggleChecked(checked: boolean, label: 'KRITISK' | 'VIGTIG' | 'NYTTIG'): void {
         const key = label === 'KRITISK' ? 'critical' : 'nonCritical'
         const change = checked ? 1 : -1
 
@@ -30,7 +37,14 @@ export default function ChecklistCard({ categoryObj, toggleTotalChecked }) {
         toggleTotalChecked(checked, label)
     }
 
-    const iconMapObj = {
+    const iconMapObj: {
+        'Vand & Mad': LucideIcon,
+        'Medicin': LucideIcon, 
+        'Kommunikation': LucideIcon, 
+        'Værktøj': LucideIcon, 
+        'Hygiejne': LucideIcon, 
+        'Dokumenter': LucideIcon   
+    } = {
         'Vand & Mad': Droplets,
         'Medicin': Bandage, 
         'Kommunikation': Radio, 
@@ -38,7 +52,8 @@ export default function ChecklistCard({ categoryObj, toggleTotalChecked }) {
         'Hygiejne': Bubbles, 
         'Dokumenter': IdCard
     }
-    const Icon = iconMapObj[categoryObj.type]
+    
+    const Icon: LucideIcon = iconMapObj[categoryObj.type as keyof typeof iconMapObj]
 
     const colorMapObj = {
         'Vand & Mad': 'bg-blue-200 text-blue-600 rounded-full p-2',
@@ -48,7 +63,7 @@ export default function ChecklistCard({ categoryObj, toggleTotalChecked }) {
         'Hygiejne': 'bg-green-200 text-green-600 rounded-full p-2', 
         'Dokumenter': 'bg-gray-200 text-gray-600 rounded-full p-2'
     }
-    const iconColorStyles = colorMapObj[categoryObj.type]
+    const iconColorStyles: string = colorMapObj[categoryObj.type as keyof typeof colorMapObj]
 
 
     const checklistItems = categoryObj.data.map((item, index) => {

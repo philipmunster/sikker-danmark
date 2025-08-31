@@ -1,4 +1,14 @@
-export const suppliesData = [
+export type CategoryDataType = {
+    type: string,
+    data: {
+        title: string,
+        amount: string,
+        comment?: string
+        label: 'KRITISK' | 'VIGTIG' | 'NYTTIG'
+    }[]
+}
+
+export const suppliesData: CategoryDataType[] = [
   {
     type: 'Vand & Mad',
     data: [
