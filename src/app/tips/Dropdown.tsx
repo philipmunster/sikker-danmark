@@ -62,7 +62,7 @@ export default function Dropdown({ colorVariant, iconName, title, subTitle, badg
     }
 
     return (
-        <div className='border border-stone-200 rounded-md md:w-[calc(50%-0.5rem)]'>
+        <div className='border border-stone-200 rounded-md md:pb-2'>
             {/* top */}
             <div className='flex flex-col gap-4 rounded-md px-4 py-3 relative'>
                 <div className='flex gap-4 items-center '>
@@ -83,7 +83,7 @@ export default function Dropdown({ colorVariant, iconName, title, subTitle, badg
             </div>
 
             {/* fold out part */}
-            <div className={`px-4 flex flex-col gap-3 overflow-hidden transition-all duration-300 ease-in-out ${
+            <div className={`px-4 flex flex-col gap-3 overflow-hidden transition-all duration-300 ease-in-out md:flex-row md:justify-between md:items-stretch ${
                         isOpen ? 'max-h-full opacity-100 py-3' : 'max-h-0 opacity-0'
                 }`}>
 

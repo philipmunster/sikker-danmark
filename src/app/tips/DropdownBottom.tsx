@@ -47,7 +47,7 @@ export default function DropdownBottom({ color, title, subTitle = '', children }
     }
 
     return (
-        <div className='mt-3 flex flex-col gap-3'>
+        <div className='mt-3 flex flex-col gap-3 md:mt-0 md:w-1/2'>
             <div className='flex gap-2 items-center'>
                 <Info className={clsx(textColor[color], 'w-5', 'h-5')}/>
                 <p className='text-xs font-semibold'>{title}</p>

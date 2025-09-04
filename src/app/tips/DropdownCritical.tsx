@@ -7,14 +7,14 @@ import { useState } from 'react'
 export default function DropdownCritical() {
     let i = 1
 
-    const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState(true)
 
     function toggleDropdown() {
         setIsOpen(prevValue => !prevValue)
     }
  
     return (
-        <div className='bg-red-50 rounded-md md:w-[calc(50%-0.5rem)]'>
+        <div className='bg-red-50 rounded-md'>
             <div className='flex flex-col gap-4 px-4 py-3 relative'>
                 {/* top */}
                 <div className='flex gap-4 items-center '>
@@ -34,34 +34,34 @@ export default function DropdownCritical() {
                 </div>
             </div>
             {/* fold out part */}
-            <div className={`px-4 flex flex-col gap-3 overflow-hidden transition-all duration-300 ease-in-out ${
+            <div className={`px-4 flex flex-col gap-4 overflow-hidden transition-all duration-300 ease-in-out md:flex-row md:items-strech md:flex-wrap ${
                     isOpen ? 'max-h-full opacity-100 py-3' : 'max-h-0 opacity-0'
                 }`}>
-                <div className='flex items-center gap-3 bg-white rounded-md px-3 py-2'>
+                <div className='flex items-center gap-3 bg-white rounded-md px-3 py-2 md:w-[calc(50%-0.5rem)]'>
                     <p className='bg-red-100 p-2 rounded-full w-8 h-8 flex items-center justify-center text-red-600 font-bold text-xs'>{i++}</p>
                     <p className='text-sm '>Saml hele familien og bliv indendørs</p>
                 </div>
-                <div className='flex items-center gap-3 bg-white rounded-md px-3 py-2'>
+                <div className='flex items-center gap-3 bg-white rounded-md px-3 py-2 md:w-[calc(50%-0.5rem)]'>
                     <p className='bg-red-100 p-2 rounded-full w-8 h-8 flex items-center justify-center text-red-600 font-bold text-xs'>{i++}</p>
                     <p className='text-sm '>Luk alle vinduer, døre og ventilation</p>
                 </div>
-                <div className='flex items-center gap-3 bg-white rounded-md px-3 py-2'>
+                <div className='flex items-center gap-3 bg-white rounded-md px-3 py-2 md:w-[calc(50%-0.5rem)]'>
                     <p className='bg-red-100 p-2 rounded-full w-8 h-8 flex items-center justify-center text-red-600 font-bold text-xs'>{i++}</p>
                     <p className='text-sm '>Tænd for radio for officielle opdateringer</p>
                 </div>
-                <div className='flex items-center gap-3 bg-white rounded-md px-3 py-2'>
+                <div className='flex items-center gap-3 bg-white rounded-md px-3 py-2 md:w-[calc(50%-0.5rem)]'>
                     <p className='bg-red-100 p-2 rounded-full w-8 h-8 flex items-center justify-center text-red-600 font-bold text-xs'>{i++}</p>
                     <p className='text-sm '>Tjek dine nødforsyninger (vand, mad, medicin)</p>
                 </div>
-                <div className='flex items-center gap-3 bg-white rounded-md px-3 py-2'>
+                <div className='flex items-center gap-3 bg-white rounded-md px-3 py-2 md:w-[calc(50%-0.5rem)]'>
                     <p className='bg-red-100 p-2 rounded-full w-8 h-8 flex items-center justify-center text-red-600 font-bold text-xs'>{i++}</p>
                     <p className='text-sm '>Lokaliser nærmeste bunker hvis situationen forværres</p>
                 </div>
-                <div className='flex items-center gap-3 bg-white rounded-md px-3 py-2'>
+                <div className='flex items-center gap-3 bg-white rounded-md px-3 py-2 md:w-[calc(50%-0.5rem)]'>
                     <p className='bg-red-100 p-2 rounded-full w-8 h-8 flex items-center justify-center text-red-600 font-bold text-xs'>{i++}</p>
                     <p className='text-sm '>Fyld tilgængelige beholdere med vand</p>
                 </div>
-                <div className='flex items-center gap-3 bg-white rounded-md px-3 py-2'>
+                <div className='flex items-center gap-3 bg-white rounded-md px-3 py-2 md:w-[calc(50%-0.5rem)]'>
                     <p className='bg-red-100 p-2 rounded-full w-8 h-8 flex items-center justify-center text-red-600 font-bold text-xs'>{i++}</p>
                     <p className='text-sm '>Forbered en evakueringsplan</p>
                 </div>
