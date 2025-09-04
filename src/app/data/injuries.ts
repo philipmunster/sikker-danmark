@@ -1,6 +1,8 @@
-export type emergencyDataItem = {
+import { type map, type mapItem } from '@/app/medicin/injuries/page'
+
+type emergencyDataItem = {
     id: number
-    type: string
+    type: keyof map
     label: 'KRITISK' | 'VIGTIG' | 'NYTTIG'
     steps: string[]
 }

@@ -1,15 +1,15 @@
-import { emergencyData, type emergencyDataItem } from "@/app/data/injuries"
+import { emergencyData } from "@/app/data/injuries"
 import { Heart, Zap, Bandage, TriangleAlert, Activity, type LucideIcon } from 'lucide-react'
 import clsx from 'clsx'
 import Badge from '@/app/components/Badge'
 
-type mapItem = {
+export type mapItem = {
     icon: LucideIcon
     numColor: string
     iconColor: string
 }
 
-type map = {
+export type map = {
     'Alvorlig blødning': mapItem,
     'Forbrænding': mapItem,
     'Brud eller forstuvning': mapItem,
@@ -47,7 +47,8 @@ export default function InjuriesPage() {
         }
     }
 
-    const emergencyDataElements = emergencyData.map(emergencyItem => {
+    const emergencyDataElements = emergencyData.map((emergencyItem) => {
+
         const Icon = iconColorMap[emergencyItem.type].icon
         const numColor = iconColorMap[emergencyItem.type].numColor
         const iconColor = iconColorMap[emergencyItem.type].iconColor
