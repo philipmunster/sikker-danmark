@@ -62,7 +62,7 @@ export default function Dropdown({ colorVariant, iconName, title, subTitle, badg
     }
 
     return (
-        <div className='border border-stone-200 rounded-md'>
+        <div className='border border-stone-200 rounded-md md:w-[calc(50%-0.5rem)]'>
             {/* top */}
             <div className='flex flex-col gap-4 rounded-md px-4 py-3 relative'>
                 <div className='flex gap-4 items-center '>

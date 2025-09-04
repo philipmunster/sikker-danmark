@@ -14,7 +14,7 @@ export default function DropdownCritical() {
     }
  
     return (
-        <div className='bg-red-50 rounded-md'>
+        <div className='bg-red-50 rounded-md md:w-[calc(50%-0.5rem)]'>
             <div className='flex flex-col gap-4 px-4 py-3 relative'>
                 {/* top */}
                 <div className='flex gap-4 items-center '>
