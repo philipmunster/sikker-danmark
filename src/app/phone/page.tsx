@@ -1,7 +1,7 @@
 import Headline from '@/app/components/Headline'
 import { Phone } from 'lucide-react'
 
-export default async function PhonePage() {
+export default function PhonePage() {
 
     return (
         <section className='mx-4'>

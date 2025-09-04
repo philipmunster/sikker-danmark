@@ -20,8 +20,8 @@ export default function Navigation() {
                 <NavItem href='/tips' isActive={pathname === '/tips'} Icon={BookOpen} color='blue'>
                     Tips
                 </NavItem>
-                <NavItem href='/medicin' isActive={pathname === '/medicin'} Icon={Heart} color='red'>
-                    Medicin
+                <NavItem href='/medicin' isActive={pathname.startsWith('/medicin')} Icon={Heart} color='red'>
+                    Førstehjælp
                 </NavItem>
                 <NavItem href='/phone' isActive={pathname === '/phone'} Icon={Phone} color='purple'>
                     Telefon
