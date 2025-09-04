@@ -3,7 +3,7 @@ import { p4Stations } from '@/app/data/radioSignal'
 export default function RadioPage() {
 
     const stationCards = p4Stations.map((station, index) => (
-        <div className='flex gap-4 items-center rounded-lg bg-purple-100 border border-purple-200 p-4 md:w-[calc(50%-0.5rem)]'>
+        <div key={index} className='flex gap-4 items-center rounded-lg bg-purple-100 border border-purple-200 p-4 md:w-[calc(50%-0.5rem)]'>
             <div>
                 <h3 className='text-sm font-semibold'>{station.district}</h3>
                 <p className='text-xs text-gray-700'>Præcis lokation: {station.sender}</p>

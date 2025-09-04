@@ -1,7 +1,7 @@
 "use client"
 
 import NavItem from '@/app/components/NavItem'
-import { Phone, RadioTower, AlarmClock } from 'lucide-react'
+import { Phone, RadioTower} from 'lucide-react'
 import { usePathname } from 'next/navigation'
 
 export default function Navigation() {

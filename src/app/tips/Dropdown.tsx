@@ -25,7 +25,6 @@ type IconsObj = {
 }
 
 export default function Dropdown({ colorVariant, iconName, title, subTitle, badgeColor, badgeText, children }: DropdownProps) {
-    let i = 1
 
     const [isOpen, setIsOpen] = useState(false)
 

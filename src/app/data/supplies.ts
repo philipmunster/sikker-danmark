@@ -126,7 +126,7 @@ export const suppliesData: CategoryDataType[] = [
         label: 'NYTTIG'
       },
       {
-        title: 'Duct tape',
+        title: 'Gaffa tape',
         amount: '1 rulle',
         label: 'NYTTIG'
       }

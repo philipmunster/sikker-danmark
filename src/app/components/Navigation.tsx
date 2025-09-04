@@ -14,7 +14,7 @@ export default function Navigation() {
             bg-neutral-100 my-4 rounded-lg border-2 border-neutral-200
             text-xs 
             ">  
-                <NavItem href='/supplies' isActive={pathname === '/supplies'} Icon={Package} color='yellow'>
+                <NavItem href='/' isActive={pathname === '/'} Icon={Package} color='yellow'>
                     Forsyninger
                 </NavItem>
                 <NavItem href='/tips' isActive={pathname === '/tips'} Icon={BookOpen} color='blue'>

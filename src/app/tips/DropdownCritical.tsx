@@ -1,7 +1,7 @@
 "use client"
 
 import Badge from '@/app/components/Badge'
-import { Clock, ChevronDown, ChevronUp } from 'lucide-react'
+import { Clock, ChevronDown } from 'lucide-react'
 import { useState } from 'react'
 
 export default function DropdownCritical() {

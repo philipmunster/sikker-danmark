@@ -1,4 +1,4 @@
-import { type map, type mapItem } from '@/app/medicin/injuries/page'
+import { type map} from '@/app/medicin/injuries/page'
 
 type emergencyDataItem = {
     id: number

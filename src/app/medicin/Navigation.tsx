@@ -1,7 +1,7 @@
 "use client"
 
 import NavItem from '@/app/components/NavItem'
-import { Heart, Activity, Bandage, Thermometer, TestTubeDiagonal } from 'lucide-react'
+import { Activity, Bandage, Thermometer, TestTubeDiagonal } from 'lucide-react'
 import { usePathname } from 'next/navigation'
 
 export default function Navigation() {

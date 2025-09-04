@@ -5,9 +5,9 @@ import Footer from '@/app/components/Footer'
 import Navigation from '@/app/components/Navigation'
 import OfflineToast from "./components/OfflineToast";
 
-const geistSans = Inter({
-  variable: "--font-inter-sans",
-  subsets: ["latin"],
+const inter = Inter({
+  display: "swap",
+  subsets: ["latin"]
 });
 
 export default function RootLayout({
@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={inter.className}>
       <body
         className='antialiased h-screen flex flex-col items-center'>
         <Header />
