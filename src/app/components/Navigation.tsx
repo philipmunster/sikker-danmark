@@ -8,10 +8,10 @@ export default function Navigation() {
     const pathname = usePathname()
 
     return (
-        <nav>
+        <nav className='w-11/12'>
             <ul className="
             flex justify-around items-center p-1
-            bg-neutral-100 m-4 rounded-lg border-2 border-neutral-200
+            bg-neutral-100 my-4 rounded-lg border-2 border-neutral-200
             text-xs 
             ">  
                 <NavItem href='/supplies' isActive={pathname === '/supplies'} Icon={Package} color='yellow'>
@@ -23,7 +23,7 @@ export default function Navigation() {
                 <NavItem href='/medicin' isActive={pathname.startsWith('/medicin')} Icon={Heart} color='red'>
                     Førstehjælp
                 </NavItem>
-                <NavItem href='/phone' isActive={pathname.startsWith('/phone')} Icon={Phone} color='purple'>
+                <NavItem href='/contact' isActive={pathname.startsWith('/contact')} Icon={Phone} color='purple'>
                     Kontakt
                 </NavItem>
             </ul>

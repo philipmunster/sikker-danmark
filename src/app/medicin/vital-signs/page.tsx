@@ -2,7 +2,7 @@ import { Users, CircleCheckBig } from "lucide-react"
 
 export default function VitalSignsPage() {
     return (
-        <section className="mx-4 mb-4 bg-neutral-100 border-x-2 border-b-2 border-neutral-200 p-4 rounded-b-lg">
+        <section className="mb-4 bg-neutral-100 border-x-2 border-b-2 border-neutral-200 p-4 rounded-b-lg">
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 flex flex-col gap-6">
                 <p className="text-sm text-blue-800">Følgende er reference værdier for normale vitale tegn. Værdierne er udelukkende vejlende.</p>
                 <div className="flex flex-col gap-2 text-sm">

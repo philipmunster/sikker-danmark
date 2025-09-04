@@ -11,13 +11,13 @@ export default function Navigation() {
         <nav>
             <ul className="
             flex justify-around items-center
-            bg-neutral-100 mx-4 mt-4 rounded-t-lg border-t-2 border-x-2 border-neutral-200
-            text-xs p-2
+            bg-neutral-100 mt-4 rounded-t-lg border-t-2 border-x-2 border-neutral-200
+            text-xs pt-4 px-4
             ">  
-                <NavItem href='/phone' isActive={pathname === '/phone'} Icon={Phone} simpleVariant={true}>
+                <NavItem href='/contact' isActive={pathname === '/contact'} Icon={Phone} simpleVariant={true}>
                     Telefonnumre
                 </NavItem>
-                <NavItem href='/phone/radio' isActive={pathname === '/phone/radio'} Icon={RadioTower} simpleVariant={true}>
+                <NavItem href='/contact/radio' isActive={pathname === '/contact/radio'} Icon={RadioTower} simpleVariant={true}>
                     Radiofrekvenser
                 </NavItem>
             </ul>

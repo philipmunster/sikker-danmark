@@ -18,13 +18,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className='antialiased h-screen flex flex-col'>
+        className='antialiased h-screen flex flex-col items-center'>
         <Header />
-        <OfflineToast />
-        <Navigation />
-        <main className="grow">
-          {children}
-        </main> 
+        <div className="grow flex flex-col items-center max-w-[800px] w-full">
+          <OfflineToast />
+          <Navigation />
+          <main className="w-11/12">
+            {children}
+          </main> 
+        </div>
         <Footer />
       </body>
     </html>

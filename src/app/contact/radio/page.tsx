@@ -15,7 +15,7 @@ export default function RadioPage() {
     ))
 
     return (
-        <section className="mx-4 mb-4 bg-neutral-100 border-x-2 border-b-2 border-neutral-200 p-4 rounded-b-lg">
+        <section className="mb-4 bg-neutral-100 border-x-2 border-b-2 border-neutral-200 p-4 rounded-b-lg">
             <div className="bg-purple-50 border border-purple-200 rounded-lg p-4 flex flex-col gap-4">
                 <p className='text-sm text-purple-600'>Beredskabsmeddelelser til befolkningen vil blive udsendt på DR’s lokale P4-radiostationer.</p>
                 <p className='text-sm text-purple-600'>Vælg den station der er tættest på dig.</p>

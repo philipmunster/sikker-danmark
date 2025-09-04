@@ -2,7 +2,7 @@ import { AlertTriangle, Heart, Zap, Activity, Thermometer } from "lucide-react"
 
 export default function SymptomsPage() {
     return (
-        <section className="mx-4 mb-4 bg-neutral-100 border-x-2 border-b-2 border-neutral-200 p-4 rounded-b-lg">
+        <section className="mb-4 bg-neutral-100 border-x-2 border-b-2 border-neutral-200 p-4 rounded-b-lg">
             <div className="bg-red-50 border border-red-200 rounded-lg p-4 flex flex-col gap-6">
                 <div className="flex flex-col gap-3">
                     <div className="flex gap-4">

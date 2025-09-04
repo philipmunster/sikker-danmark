@@ -1,9 +1,9 @@
 import Headline from '@/app/components/Headline'
 import { Phone } from 'lucide-react'
-import Navigation from '@/app/phone/Navigation'
+import Navigation from '@/app/contact/Navigation'
 
 
-export default function PhoneLayout({ children }: {children: React.ReactNode}) {
+export default function ContactLayout({ children }: {children: React.ReactNode}) {
     return (
         <>
         <section className='mx-4'>

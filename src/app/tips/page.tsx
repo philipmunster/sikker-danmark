@@ -8,7 +8,7 @@ import { BookOpen } from 'lucide-react'
 export default function TipsPage() {
 
     return (
-        <section className='mx-4 mb-4 flex flex-col gap-4'>
+        <section className='mb-4 flex flex-col gap-4'>
             <Headline color='blue' Icon={BookOpen} title='Overlevelsestips'>Følg nedenstånde instruktioner for bedst at håndtere en krisesituation.</Headline>
             <DropdownCritical />
             <Dropdown 
