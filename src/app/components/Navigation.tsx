@@ -21,7 +21,7 @@ export default function Navigation() {
                     Tips
                 </NavItem>
                 <NavItem href='/medicin' isActive={pathname.startsWith('/medicin')} Icon={Heart} color='red'>
-                    Medicin
+                    Førstehjælp
                 </NavItem>
                 <NavItem href='/phone' isActive={pathname === '/phone'} Icon={Phone} color='purple'>
                     Telefon
