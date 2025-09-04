@@ -44,10 +44,10 @@ export default function SuppliesPage() {
     const elementCountStyle = totalFractionDone === 1 ? 'bg-green-700 text-white' : 'border-gray-300'
 
     return (
-        <section className='mb-4 flex flex-col gap-4'>
+        <section className='mb-4 flex flex-col gap-4 md:flex-row md:flex-wrap md:items-stretch md:justify-center'>
             <Headline color='yellow' Icon={Package} title='Nødforsyninger'>Følg nedenstående tjekliste for at forberede dig til en krisesituation.</Headline>
 
-            <div className='flex flex-col gap-3 bg-gray-100 p-4 rounded-md text-sm shadow-md'>
+            <div className='flex flex-col gap-3 bg-gray-100 p-4 rounded-md text-sm shadow-md md:w-[calc(50%-0.5rem)]'>
                 <div className='flex justify-between items-center'>
                     <div className='flex gap-3 items-center'>
                         <Target className='h-5 w-5'/>
@@ -61,7 +61,7 @@ export default function SuppliesPage() {
                 <p className='text-gray-600'>{`${Math.round(totalFractionDone * 100)}% af alle forsyninger tjekket af`}</p>
             </div>
 
-            <div className='flex flex-col gap-3 bg-red-100 p-4 rounded-md text-sm shadow-md'>
+            <div className='flex flex-col gap-3 bg-red-100 p-4 rounded-md text-sm shadow-md md:w-[calc(50%-0.5rem)]'>
                 <div className='flex justify-between items-center'>
                     <div className='flex gap-3 items-center'>
                         <AlertOctagon className='h-5 w-5 text-red-700'/>

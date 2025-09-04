@@ -91,7 +91,7 @@ export default function ChecklistCard({ categoryObj, toggleTotalChecked }: Check
     const elementCountStyle = fractionDone === 1 ? 'bg-green-700 text-white' : 'border-gray-300'
 
     return (
-        <div className="flex flex-col gap-3 border border-gray-200 p-4 rounded-lg text-sm">
+        <div className="flex flex-col gap-3 border border-gray-200 p-4 rounded-lg text-sm md:w-[calc(50%-0.5rem)]">
             <div className='flex justify-between items-center'>
                 <div className='flex items-center gap-4'>
                     <div className={iconColorStyles}>
