@@ -12,7 +12,7 @@ export default function Navigation() {
             <ul className="
             flex justify-around items-center
             bg-neutral-100 mt-4 rounded-t-lg border-t-2 border-x-2 border-neutral-200
-            text-xs pt-4 px-4
+            text-xs pt-4 px-4 md:gap-2
             ">  
                 <NavItem href='/medicin' isActive={pathname === '/medicin'} Icon={Activity} simpleVariant={true}>
                     Nødsituation

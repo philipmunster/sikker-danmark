@@ -10,7 +10,7 @@ export default function Navigation() {
     return (
         <nav>
             <ul className="
-            flex justify-around items-center
+            flex justify-around gap-2 items-center
             bg-neutral-100 mt-4 rounded-t-lg border-t-2 border-x-2 border-neutral-200
             text-xs pt-4 px-4
             ">  

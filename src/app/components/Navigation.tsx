@@ -10,7 +10,7 @@ export default function Navigation() {
     return (
         <nav className='w-11/12'>
             <ul className="
-            flex justify-around items-center p-1
+            flex justify-around gap-2 items-center p-1
             bg-neutral-100 my-4 rounded-lg border-2 border-neutral-200
             text-xs 
             ">  
