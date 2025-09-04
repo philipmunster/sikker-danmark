@@ -1,7 +1,7 @@
 "use client"
 
 import NavItem from '@/app/components/NavItem'
-import { Heart, Activity, Bandage, Thermometer } from 'lucide-react'
+import { Heart, Activity, Bandage, Thermometer, TestTubeDiagonal } from 'lucide-react'
 import { usePathname } from 'next/navigation'
 
 export default function Navigation() {
@@ -22,6 +22,9 @@ export default function Navigation() {
                 </NavItem>
                 <NavItem href='/medicin/symptoms' isActive={pathname === '/medicin/symptoms'} Icon={Thermometer} simpleVariant={true}>
                     Symptomer
+                </NavItem>
+                <NavItem href='/medicin/vital-signs' isActive={pathname === '/medicin/vital-signs'} Icon={TestTubeDiagonal} simpleVariant={true}>
+                    Vitale tegn
                 </NavItem>
             </ul>
         </nav>
