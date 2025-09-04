@@ -4,17 +4,20 @@ import { Activity, AlertTriangle } from 'lucide-react'
 export default function MedicinPage() {
 
     const stepsItems = firstAidData.map( (item, index) => (
-        <div key={item.id} className="flex items-start gap-2">
-            <span className="bg-brand w-6 aspect-square rounded-full text-white font-semibold flex justify-center items-center text-sm shrink-0">{index + 1}</span>
-            <div className="flex flex-col gap-3">
-                <p className="font-semibold">{item.type}</p>
-                {item.steps.map( (step, index) => (
-                    <div key={index} className="text-sm flex gap-3 items-start bg-white rounded-md p-3">
-                        <span className="bg-neutral-200 rounded-full flex items-center justify-center shrink-0 w-6 aspect-square">{index + 1}</span>
-                        <p>{step}</p>
-                    </div>
-                ))}
+        <div key={item.id} className="flex flex-col gap-6">
+            <div className="flex items-start gap-2">
+                <span className="bg-brand w-6 aspect-square rounded-full text-white font-semibold flex justify-center items-center text-sm shrink-0">{index + 1}</span>
+                <div className="flex flex-col gap-3">
+                    <p className="font-semibold">{item.type}</p>
+                    {item.steps.map( (step, index) => (
+                        <div key={index} className="text-sm flex gap-3 items-start bg-white rounded-md p-3">
+                            <span className="bg-neutral-200 rounded-full flex items-center justify-center shrink-0 w-6 aspect-square">{index + 1}</span>
+                            <p>{step}</p>
+                        </div>
+                    ))}
+                </div>
             </div>
+            {index != firstAidData.length - 1 && <hr className="text-neutral-300"/>}
         </div>
     ))
 
@@ -26,7 +29,7 @@ export default function MedicinPage() {
                     <Activity className="text-red-600 h-4 w-4 shrink-0"/>
                     <p className="text-sm text-red-600">Følg disse trin i rækkefølge ved alle medicinske nødsituationer</p>
                 </div>
-                <div className="flex flex-col gap-8">
+                <div className="flex flex-col gap-6">
                     {stepsItems}
                 </div>
             </div>

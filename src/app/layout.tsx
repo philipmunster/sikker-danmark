@@ -20,7 +20,7 @@ export default function RootLayout({
       <body
         className='antialiased h-screen flex flex-col items-center'>
         <Header />
-        <div className="grow flex flex-col items-center max-w-[800px] w-full">
+        <div className="grow flex flex-col items-center max-w-[800px] w-full mb-12">
           <OfflineToast />
           <Navigation />
           <main className="w-11/12">
