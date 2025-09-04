@@ -47,7 +47,7 @@ export default function InjuriesPage() {
         }
     }
 
-    const emergencyDataElements = emergencyData.map((emergencyItem) => {
+    const emergencyDataElements = emergencyData.map((emergencyItem, index) => {
 
         const Icon = iconColorMap[emergencyItem.type].icon
         const numColor = iconColorMap[emergencyItem.type].numColor
@@ -61,6 +61,7 @@ export default function InjuriesPage() {
 
         return (
             <div className="bg-neutral-50 border border-neutral-200 rounded-lg p-4 flex flex-col gap-4">
+                {index === 0 && <p className="text-sm text-gray-600 mb-3">Dette er et overblik over hyppige skader. Følg instruktionerne nøje.</p>}
                 <div className="flex items-center gap-2">
                     <div className={clsx(iconColor, 'rounded-full', 'p-2')}><Icon className='h-4 w-4'/></div>
                     <p className="font-semibold">{emergencyItem.type}</p>

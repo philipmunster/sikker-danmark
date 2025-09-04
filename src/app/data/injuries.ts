@@ -21,31 +21,6 @@ export const emergencyData: emergencyDataItem[] = [
     ]
   },
   {
-    id: 2,
-    type: 'Forbrænding',
-    label: 'VIGTIG',
-    steps: [
-      'Fjern personen fra varmekilden øjeblikkeligt',
-      'Køl forbrændingen med koldt (ikke iskoldt) vand i 10-20 minutter',
-      'Fjern smykker og løst tøj før hævelse opstår',
-      'Dæk med sterilt ikke-klæbende forbinding eller rent tøj',
-      'Giv aldrig is direkte på forbrændingen - det kan gøre skaden værre',
-      'Søg lægehjælp ved store eller dybe forbrændinger'
-    ]
-  },
-  {
-    id: 3,
-    type: 'Brud eller forstuvning',
-    label: 'VIGTIG',
-    steps: [
-      'Immobiliser det skadede område - flyt det ikke unødvendigt',
-      'Anvend is indpakket i håndklæde i 15-20 minutter for at reducere hævelse',
-      'Løft det skadede område over hjerteniveau hvis muligt',
-      'Lav en skinne med stive materialer (brædder, magasiner) hvis nødvendigt',
-      'Flyt ALDRIG personen hvis rygskade er mistænkt - vent på hjælp'
-    ]
-  },
-  {
     id: 4,
     type: 'Forgiftning',
     label: 'KRITISK',
@@ -69,6 +44,31 @@ export const emergencyData: emergencyDataItem[] = [
       'Hvis ingen vejrtrækning: Start genoplivning øjeblikkeligt',
       'Hvis der er vejrtrækning: Læg i stabil sideleie',
       'Overvåg kontinuerligt og vær klar til at starte genoplivning'
+    ]
+  },
+  {
+    id: 2,
+    type: 'Forbrænding',
+    label: 'VIGTIG',
+    steps: [
+      'Fjern personen fra varmekilden øjeblikkeligt',
+      'Køl forbrændingen med koldt (ikke iskoldt) vand i 10-20 minutter',
+      'Fjern smykker og løst tøj før hævelse opstår',
+      'Dæk med sterilt ikke-klæbende forbinding eller rent tøj',
+      'Giv aldrig is direkte på forbrændingen - det kan gøre skaden værre',
+      'Søg lægehjælp ved store eller dybe forbrændinger'
+    ]
+  },
+  {
+    id: 3,
+    type: 'Brud eller forstuvning',
+    label: 'VIGTIG',
+    steps: [
+      'Immobiliser det skadede område - flyt det ikke unødvendigt',
+      'Anvend is indpakket i håndklæde i 15-20 minutter for at reducere hævelse',
+      'Løft det skadede område over hjerteniveau hvis muligt',
+      'Lav en skinne med stive materialer (brædder, magasiner) hvis nødvendigt',
+      'Flyt ALDRIG personen hvis rygskade er mistænkt - vent på hjælp'
     ]
   }
 ]
