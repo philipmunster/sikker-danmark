@@ -20,9 +20,6 @@ export default function Navigation() {
                 <NavItem href='/phone/radio' isActive={pathname === '/phone/radio'} Icon={RadioTower} simpleVariant={true}>
                     Radiofrekvenser
                 </NavItem>
-                <NavItem href='/phone/alarm-signals' isActive={pathname === '/phone/alarm-signals'} Icon={AlarmClock} simpleVariant={true}>
-                    Alarmsignaler
-                </NavItem>
             </ul>
         </nav>
     )

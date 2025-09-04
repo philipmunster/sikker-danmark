@@ -1,5 +1,3 @@
-import { RadioTower } from 'lucide-react'
-import Badge from '@/app/components/Badge'
 import { p4Stations } from '@/app/data/radioSignal'
 
 export default function RadioPage() {
