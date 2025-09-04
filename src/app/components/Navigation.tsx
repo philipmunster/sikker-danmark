@@ -23,8 +23,8 @@ export default function Navigation() {
                 <NavItem href='/medicin' isActive={pathname.startsWith('/medicin')} Icon={Heart} color='red'>
                     Førstehjælp
                 </NavItem>
-                <NavItem href='/phone' isActive={pathname === '/phone'} Icon={Phone} color='purple'>
-                    Telefon
+                <NavItem href='/phone' isActive={pathname.startsWith('/phone')} Icon={Phone} color='purple'>
+                    Kontakt
                 </NavItem>
             </ul>
         </nav>
