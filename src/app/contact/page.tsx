@@ -80,10 +80,10 @@ export default function ContactPage() {
                     </div>
                     <div>
                         <h3 className='text-sm font-semibold'>Politiets servicetelefon</h3>
-                        <p className='text-xs text-gray-700'>Hele døgnet</p>
+                        <p className='text-xs text-gray-700'>Hele døgnet (ikke akutte sager)=</p>
                     </div>
                     <div className='ml-auto text-right'>
-                        <h3 className='text-xl font-bold text-blue-600'>1813</h3>
+                        <h3 className='text-xl font-bold text-blue-600'>144</h3>
                         <Badge color='white'>nyttig</Badge>
                     </div>
                 </div>

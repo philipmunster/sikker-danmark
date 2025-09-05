@@ -111,7 +111,7 @@ export const suppliesData: CategoryDataType[] = [
         label: 'KRITISK'
       },
       {
-        title: 'Flerværktøj/kniv',
+        title: 'Schweizer kniv',
         amount: '1 stk',
         label: 'VIGTIG'
       },
@@ -179,7 +179,7 @@ export const suppliesData: CategoryDataType[] = [
       },
       {
         title: 'Familiebilleder',
-        amount: 'Til identificering',
+        amount: 'Kun de vigtigste',
         label: 'NYTTIG'
       }
     ]
