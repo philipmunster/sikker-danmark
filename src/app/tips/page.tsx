@@ -29,9 +29,8 @@ export default function TipsPage() {
                 </DropdownTop>
                 <hr className='text-stone-200'/>
                 <DropdownBottom title='Vandrationering' subTitle='Minimum 3 liter per person per dag' color='blue'>
-                    <li>Kog vand i mindst 1 minut for at dræbe bakterier</li>
-                    <li>Brug vandrensningstabletter hvis tilgængelige</li>
-                    <li>Filtrer vand gennem rent tøj først hvis det er grumset</li>
+                    <li>Drik små mængder jævnligt frem for store mængder</li>
+                    <li>Undgå alkohol og koffein - de dehydrerer</li>
                 </DropdownBottom>
 
             </Dropdown>

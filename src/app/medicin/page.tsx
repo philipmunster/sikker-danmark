@@ -64,7 +64,7 @@ export default function MedicinPage() {
                     <ul className="text-sm list-disc ml-5 flex flex-col gap-3">
                         <li className="marker:text-red-600">Rytme: 100-120 kompressioner per minut (syng &quot;Staying Alive&quot; i hovedet)</li>
                         <li className="marker:text-red-600">Skift med andre hver 2. minut hvis muligt - du bliver hurtigt træt</li>
-                        <li className="marker:text-red-600">30 kompressioner, så 2 indblæsninger (hvis du kan)</li>
+                        <li className="marker:text-red-600">30 kompressioner, så 2 indblæsninger</li>
                         <li className="marker:text-red-600">Stop kun hvis personen begynder at bevæge sig eller trække vejret</li>
                     </ul>
                 </div>

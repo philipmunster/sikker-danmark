@@ -26,7 +26,7 @@ export const emergencyData: emergencyDataItem[] = [
     label: 'KRITISK',
     steps: [
       'Identificér hvad personen har indtaget - gem emballagen',
-      'Kontakt Giftlinjen: 82 12 12 12 (noter dette nummer)',
+      'Kontakt Giftlinjen: 82 12 12 12',
       'Gem emballagen eller resten af det giftige stof til undersøgelse',
       'Fremkald ALDRIG opkastning medmindre du får specifik instruktion',
       'Giv vand at drikke hvis personen er ved bevidsthed og ikke opkaster',
@@ -38,7 +38,7 @@ export const emergencyData: emergencyDataItem[] = [
     type: 'Bevidstløshed',
     label: 'KRITISK',
     steps: [
-      'Tjek for reaktion - rist forsigtigt på skuldrene og tal højt',
+      'Tjek for reaktion - ryst forsigtigt på skuldrene og tal højt',
       'Åbn luftvejene - løft hagen, tipt hovedet forsigtigt bagover',
       'Tjek for vejrtrækning i 10 sekunder - se, hør, mærk',
       'Hvis ingen vejrtrækning: Start genoplivning øjeblikkeligt',

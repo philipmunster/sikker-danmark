@@ -9,19 +9,19 @@ export const firstAidData = [
     id: 1,
     type: 'Vurder situationen',
     steps: [
-      'Sørg for din egen sikkerhed først – stop ikke hvis du også kommer i fare',
-      'Tjek om personen er ved bevidsthed – rist forsigtigt på skuldrene',
-      'Rop efter hjælp hvis muligt – få andre til at hjælpe',
-      'Ring 112 hvis telefonnette virker – giv præcis lokation'
+      'Sørg for din egen sikkerhed først – stop hvis du også kommer i fare',
+      'Tjek om personen er ved bevidsthed – ryst forsigtigt på skuldrene',
+      'Råb efter hjælp hvis muligt – få andre til at hjælpe',
+      'Ring 112 hvis telefonnettet virker – giv præcis lokation'
     ]
   },
   {
     id: 2,
     type: 'ABC - Livsvigtige funktioner',
     steps: [
-      'A – Airways (luftveje): Tjek om luftvejene er frie – fjern genstand fra mund',
+      'A – Airways (luftveje): Tjek om luftvejene er frie',
       'B – Breathing (vejrtrækning): Tjek om personen trækker vejret – se, hør, mærk',
-      'C – Circulation (cirkulation): Tjek puls på hals eller håndled og stop blødning'
+      'C – Circulation (cirkulation): Tjek puls på hals eller håndled og stop potentielle blødninger'
     ]
   },
   {
